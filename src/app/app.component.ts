@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'recipe-book';
+  selectedOption = 'recipe';
+
+  onGettingData(selectedOption: string) {
+    this.selectedOption = selectedOption;
+  }
+  onEventClick() {
+
+  }
 }

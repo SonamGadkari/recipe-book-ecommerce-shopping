@@ -1,4 +1,9 @@
-<h3>Recipe Name</h3>
+<h3>Recipe Name: {{recipe.name}}</h3>
+<div class="row">
+  <div class="col-xs-12">
+    <img [src]="recipe.imagePath" class="img-responsive" style="max-height: 300px;">
+  </div>
+</div>
 <h1 class="dropdown">
   <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Manage Recipes <span class="caret"></span></button>
 </h1>
@@ -7,5 +12,9 @@
   <li><a href="#">Edit Recipe</a></li>
   <li><a href="#">Delete Recipe</a></li>
 </ul>
-<ul><p>Description</p></ul>
+<div class="row">
+  <div class="col-xs-12">
+    {{recipe.description}}
+  </div>
+</div>
 <ul><p>Ingredients</p></ul>

@@ -1,4 +1,4 @@
-import {Component, Directive} from '@angular/core';
+import {Component, Directive, EventEmitter, Output} from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -8,8 +8,13 @@ import {Component, Directive} from '@angular/core';
 
 
 export class HeaderComponent {
+  @Output() selectValue = new EventEmitter<{string}>();
   constructor() {
 
+  }
+
+  onSelect(feature) {
+    this.selectValue.emit(feature);
   }
   onInit() {
 
